@@ -131,7 +131,7 @@ to this search result page.
 <?php $this->endWidget(); ?>
 ```
 
-> **Note:** The form name must be `strtolower($this->modelName).'-form' if
+> **Note:** The form name must be `strtolower($this->modelName).'-form'` if
 > you want to use AJAX validation with `CActiveForm`.
 
 
@@ -196,6 +196,13 @@ specific actions:
  * `$updateScenario` : Set when updating a record. Default is `update`.
  * `$filterScenario` : Set on the filter model when assigning search parameters. Default is `filter`.
 
+## Other options
+
+If you don't want to provide all actions, you can disable some of them through
+`$crudActions`. By default this is `array('edit', 'list', 'view', 'delete').
+
+The name of the URL parameter for the return URL is set through `$returnVar` and defaults
+to `returnUrl`.
 
 # Advanced tricks
 
@@ -271,13 +278,13 @@ class UserController extends XCrudController
 
 The URL parameters to a search result page look like this:
 
-    `...&User[username]=test&User[email]=@example.com`
+    ...&User[username]=test&User[email]=@example.com
 
 This does not look very nice. It would be much better to have easier to read
 search parameters, just like Google or other search engines do it:
 
 
-    `...&username=test&email=@example.com`
+    ...&username=test&email=@example.com
 
 It's very easy to achieve this. You have to override the `assignFilterModelAttributes()`
 method in your controller like this:
