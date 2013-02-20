@@ -1,0 +1,17 @@
+{
+    "name": "mikehaertl/xcrudcontroller",
+    "description": "xcrudcontroller is a Yii base class to quickly build customized CRUD interfaces.",
+    "keywords": ["yii","CRUD","controller"],
+    "homepage": "https://github.com/mikehaertl/xcrudcontroller",
+    "type": "yii-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Haertl",
+            "email": "haertl.mike@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    }
+}
